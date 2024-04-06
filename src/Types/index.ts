@@ -13,4 +13,25 @@ export type candidate = {
   score: number;
   index: number;
   img: string;
+  id: number;
+};
+
+type scores = {
+  max_score: number;
+  min_score: number;
+  score_type: string;
+  user_score: number;
+};
+export type candidateComplete = {
+  full_name: string;
+  email: string;
+  score: number;
+  index: number;
+  img: string;
+  id: number;
+  about_me: string;
+  experience: string;
+  hobbies: string;
+  introduction: string;
+  scores: Array<scores>;
 };
