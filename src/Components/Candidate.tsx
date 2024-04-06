@@ -2,11 +2,14 @@ import { candidate } from '@/Types'
 import React from 'react'
 import icon from "../assests/userIcon.jpg"
 import Image from "next/image"
+import { setId } from '@/lib/features/candiate/candidateSlice'
 
-const Candidate = ({ email, img, full_name, score, index }: candidate) => {
+const Candidate = ({ email, img, full_name, score, index, id }: candidate) => {
     return (
         <>
-            <tr className={`text-gray-700 ${index === 0 ? "bg-gray-100" : ""}`}>
+            <tr className={`text-gray-700 ${index === 0 ? "bg-gray-100" : ""}`} onClick={() => {
+                setId(id)
+            }}>
                 <td className="px-4 py-3">
                     <div className="flex items-center text-sm">
                         <div className="relative w-8 h-8 mr-3 rounded-full md:block">

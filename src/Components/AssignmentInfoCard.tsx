@@ -5,7 +5,6 @@ import box from "../assests/box.svg";
 import copy from "../assests/copy.svg";
 import pen from "../assests/pencil.svg";
 import CandidateList from './CandidateList';
-
 const AssignmentInfoCard = ({
     duration_in_seconds,
     ends_at,
@@ -50,7 +49,6 @@ const AssignmentInfoCard = ({
                 </div>
             </div>
             <div className="bg-white flex flex-col gap-3 rounded max-h-fit">
-
                 <CandidateList />
             </div>
         </>
