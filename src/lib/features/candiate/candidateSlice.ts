@@ -10,7 +10,7 @@ export const getAssignmentInfo = createAsyncThunk(
   async () => {
     try {
       const res = await axios.get(`/assignment_details`, {
-        // withCredentials: false,
+        withCredentials: false,
       });
       // console.log("getAssignmentInfo: ", res.data);
       return res.data;
@@ -27,7 +27,7 @@ export const getCandidateInfo = createAsyncThunk(
       const res = await axios.get(
         `/candidate_assignment_data?user_id=${data.id}&assignment_id=${data.assignmentId}`,
         {
-          // withCredentials: false,
+          withCredentials: false,
         }
       );
       // console.log(res);
@@ -45,7 +45,7 @@ export const getCandidatesList = createAsyncThunk(
       const res = await axios.get(
         `/assignment_candidates?status=review&limit=10&offset=0`,
         {
-          // withCredentials: false,
+          withCredentials: false,
         }
       );
       // console.log("getCandidatesList", res.data);

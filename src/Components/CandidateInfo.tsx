@@ -167,7 +167,7 @@ const CandidateInfo = () => {
                             height={600}
                             loading="lazy"
                         />
-                        <div className="box  shadow drop-shadow-2xl shadow-inherit bg-black text-white">
+                        <div className="box relative shadow drop-shadow-2xl shadow-inherit bg-black text-white">
                             <h5 className="text-white relative bottom-8 lg:w-[17rem] text-center">Tell me about yourself</h5>
                             <p className="text-white lg:w-[17rem] text-center">
                                 Question 1/11
