@@ -15,7 +15,7 @@ const AssignmentInfoCard = ({
 
     return (
         <>
-            <div className="bg-white p-5 flex flex-col gap-3 rounded max-h-fit">
+            <div className="bg-white p-5 flex flex-col gap-3 rounded max-h-full">
                 <div className="flex flex-row justify-between w-full">
                     <h4 className='font-bold text-lg'>{title}</h4>
                     <p className={`font-bold flex items-center gap-3 ${status == "Active" ? "text-green-500" : "text-red-600"}`}>{status}

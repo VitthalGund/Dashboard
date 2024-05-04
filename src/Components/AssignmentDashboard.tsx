@@ -18,8 +18,8 @@ const AssignmentDashboard = () => {
 
     return (
         <>
-            <div className="flex flex-row gap-4 w-[50rem]">
-                <div className="flex flex-col w-1/2">
+            <div className="flex flex-row gap-4 w-fit lg:flex-row md:flex-col-reverse">
+                <div className="flex flex-col w-1/3">
                     <div className="header mt-4 mb-2 flex flex-col justify-start items-start">
                         <div className="mt-2 mb-2">
                             <p className='text-black mb-1'><span className='text-gray-500'>Pages </span>/ Assignment</p>

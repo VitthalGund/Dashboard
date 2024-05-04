@@ -30,19 +30,13 @@ const CandidateInfo = () => {
             })
         }
     }, [assignmentInfo?.id, currentId, dispatch, list?.id]);
-    // console.log("Score: ", info?.scores)
-    // React.useEffect(() => {
-    //     const onLoad = () => window.open(`myprotocol://open${params}`, '_self')
-    //     window.addEventListener('load', onLoad)
-    //     return () => window.removeEventListener('load', onLoad)
-    // }, [])
 
 
     return (
         <>
-            {info?.full_name && <div className="flex flex-row bg-white p-5 mt-24 rounded justify-center w-[57vw] h-fit">
-                <div className="flex flex-col rounded h-fit mr-3">
-                    <div className="flex w-full h-fit">
+            {info?.full_name && <div className="flex flex-row bg-white p-5 mt-24 rounded justify-center w-fit h-fit overflow-x-auto sm:flex-row md:flex-row">
+                <div className="flex flex-col rounded p-2">
+                    <div className="flex flex-wrap">
                         <div className={`text-gray-700 `}>
                             <div className="px-4 py-3">
                                 <div className="flex items-center text-sm">
@@ -77,7 +71,7 @@ const CandidateInfo = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="score mt-3 flex flex-col">
+                    <div className="score mt-3 flex flex-col flex-wrap ">
                         <div className="flex flex-row gap-3 justify-between items-center">
                             <p className="text-gray-400 font-bold">Behavioural</p>
                             <div className="flex flex-row gap-3 justify-between items-center">
@@ -150,7 +144,7 @@ const CandidateInfo = () => {
                         loading="lazy"
                     />
                     <Image
-                        className="object-cover w-10 text-white relative 2xl:top-[50%] 2xl:right-[45%] h-10 border-none sm:top-[50%] sm:right-[45%]"
+                        className="object-cover w-10 text-white relative 2xl:top-[50%] 2xl:right-[45%] h-10 border-none md:right-[25%] sm:top-[50%] sm:right-[45%]"
                         src={play}
                         alt="user"
                         width={600}
@@ -158,7 +152,7 @@ const CandidateInfo = () => {
                         loading="lazy"
                     />
 
-                    <div className="flex relative p-3 h-14  justify-center items-center top-[90%] right-[98%]">
+                    <div className="flex relative p-3 h-14  justify-center items-center top-[90%] md:right-[98%] sm:right-[57%] lg:right-[98%]">
                         <Image
                             className="object-cover w-[15%] relative left-[13%] bg-[#718096] z-50 p-5 rounded m-3"
                             src={left}

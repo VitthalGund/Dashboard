@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex flex-row gap-4 min-h-screen bg-gray-100">
+    <main className="flex flex-row gap-4 min-h-screen min-w-screen overflow-hidden bg-gray-100">
 
       <Silder />
       <StoreProvider>
