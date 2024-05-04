@@ -1,10 +1,9 @@
 import axios from "axios";
 
+axios.defaults.baseURL = "http://localhost:3000/api/";
 export const getAssignmentInfo = async () => {
   try {
-    const res = await axios.get(
-      `https://qyzlgjq37b.execute-api.ap-south-1.amazonaws.com/dev/assignment_details`
-    );
+    const res = await axios.get(`/assignment_details`);
     return res.data;
   } catch (error) {
     return error;
@@ -17,7 +16,7 @@ export const getCandidateInfo = async (data: {
 }) => {
   try {
     const res = await axios.get(
-      `https://qyzlgjq37b.execute-api.ap-south-1.amazonaws.com/dev/candidate_assignment_data?user_id=${data.id}&assignment_id=${data.assignmentId}`,
+      `/candidate_assignment_data?user_id=${data.id}&assignment_id=${data.assignmentId}`,
       {
         withCredentials: false,
       }
@@ -31,7 +30,7 @@ export const getCandidateInfo = async (data: {
 export const getCandidatesList = async () => {
   try {
     const res = await axios.get(
-      `https://qyzlgjq37b.execute-api.ap-south-1.amazonaws.com/dev/assignment_candidates?status=review&limit=10&offset=0`
+      `/assignment_candidates?status=review&limit=10&offset=0`
     );
     return res.data;
   } catch (error) {

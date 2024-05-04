@@ -2,18 +2,17 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import axios from "axios";
 
+axios.defaults.baseURL = "http://localhost:3000/api/";
 axios.defaults.withCredentials = true;
 
 export const getAssignmentInfo = createAsyncThunk(
   "get/getAssignmentInfo",
   async () => {
     try {
-      const res = await axios.get(
-        `https://qyzlgjq37b.execute-api.ap-south-1.amazonaws.com/dev/assignment_details`,
-        {
-          withCredentials: false,
-        }
-      );
+      const res = await axios.get(`/assignment_details`, {
+        // withCredentials: false,
+      });
+      // console.log("getAssignmentInfo: ", res.data);
       return res.data;
     } catch (error) {
       return error;
@@ -26,9 +25,9 @@ export const getCandidateInfo = createAsyncThunk(
   async (data: { id: number; assignmentId: string }) => {
     try {
       const res = await axios.get(
-        `https://qyzlgjq37b.execute-api.ap-south-1.amazonaws.com/dev/candidate_assignment_data?user_id=${data.id}&assignment_id=${data.assignmentId}`,
+        `/candidate_assignment_data?user_id=${data.id}&assignment_id=${data.assignmentId}`,
         {
-          withCredentials: false,
+          // withCredentials: false,
         }
       );
       // console.log(res);
@@ -44,12 +43,13 @@ export const getCandidatesList = createAsyncThunk(
   async () => {
     try {
       const res = await axios.get(
-        `https://qyzlgjq37b.execute-api.ap-south-1.amazonaws.com/dev/assignment_candidates?status=review&limit=10&offset=0`,
+        `/assignment_candidates?status=review&limit=10&offset=0`,
         {
-          withCredentials: false,
+          // withCredentials: false,
         }
       );
-      return res.data;
+      // console.log("getCandidatesList", res.data);
+      return res.data.candidateData;
     } catch (error) {
       return error;
     }
@@ -57,7 +57,7 @@ export const getCandidatesList = createAsyncThunk(
 );
 
 const initialState = {
-  loading: false,
+  loading: true,
   errorData: {
     message: "",
     type: "",
@@ -132,7 +132,6 @@ const candidateSlice = createSlice({
         state.loading = true;
       })
       .addCase(getCandidatesList.fulfilled, (state, { payload }) => {
-        // console.log(payload);
         switch (payload) {
           default:
             state.candidateList = payload.sort(
