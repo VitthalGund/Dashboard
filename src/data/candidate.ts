@@ -2,12 +2,26 @@ export const candidateData = [
   {
     full_name: "Jescie Fry",
     email: "orci.lobortis@hotmail.edu",
-    scores: {
-      user_score: 9,
-      score_type: 6,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 5,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 5,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 6,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 1,
     about_me: "Aenean euismod mauris eu",
     experience: "dictum placerat, augue. Sed molestie. Sed id risus quis diam",
@@ -21,12 +35,26 @@ export const candidateData = [
   {
     full_name: "Slade Dale",
     email: "eu.eleifend@hotmail.edu",
-    scores: {
-      user_score: 6,
-      score_type: 8,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 10,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 3,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 2,
     about_me: "odio.",
     experience:
@@ -42,12 +70,26 @@ export const candidateData = [
   {
     full_name: "Dawn Durham",
     email: "malesuada.id.erat@hotmail.net",
-    scores: {
-      user_score: 2,
-      score_type: 5,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 5,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 9,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 3,
     about_me:
       "dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit.",
@@ -63,12 +105,26 @@ export const candidateData = [
   {
     full_name: "Katelyn Talley",
     email: "donec.egestas.aliquam@icloud.com",
-    scores: {
-      user_score: 3,
-      score_type: 10,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 5,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 6,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 4,
     about_me: "eu lacus. Quisque imperdiet, erat nonummy",
     experience:
@@ -83,12 +139,26 @@ export const candidateData = [
   {
     full_name: "Zephania Lawson",
     email: "turpis.egestas.fusce@yahoo.org",
-    scores: {
-      user_score: 8,
-      score_type: "0",
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 6,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 9,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 5,
     about_me: "Quisque varius. Nam porttitor scelerisque neque.",
     experience:
@@ -103,12 +173,26 @@ export const candidateData = [
   {
     full_name: "Xander Langley",
     email: "nibh.sit@icloud.edu",
-    scores: {
-      user_score: 8,
-      score_type: 3,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 7,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 10,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
 
     id: 6,
     about_me: "pellentesque a, facilisis non, bibendum sed, est.",
@@ -124,12 +208,26 @@ export const candidateData = [
   {
     full_name: "Dustin Carrillo",
     email: "vivamus@google.net",
-    scores: {
-      user_score: 9,
-      score_type: 1,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 7,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 4,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 9,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 7,
     about_me: "arcu. Nunc mauris. Morbi",
     experience: "et libero. Proin mi. Aliquam gravida mauris ut mi. Duis",
@@ -143,12 +241,26 @@ export const candidateData = [
   {
     full_name: "Lyle Cortez",
     email: "ad@aol.edu",
-    scores: {
-      user_score: 5,
-      score_type: 7,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 5,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 4,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 8,
     about_me: "eget ipsum. Suspendisse sagittis.",
     experience: "leo, in lobortis tellus justo sit amet nulla. Donec non",
@@ -161,12 +273,26 @@ export const candidateData = [
   {
     full_name: "Paul Jenkins",
     email: "semper.egestas.urna@icloud.couk",
-    scores: {
-      user_score: 3,
-      score_type: 8,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 9,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 10,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 9,
     about_me: "orci quis lectus. Nullam suscipit, est ac facilisis facilisis,",
     experience:
@@ -182,12 +308,26 @@ export const candidateData = [
   {
     full_name: "Dalton Velazquez",
     email: "hendrerit.id@hotmail.edu",
-    scores: {
-      user_score: 10,
-      score_type: 8,
-      min_score: 7,
-      max_score: 10,
-    },
+    scores: [
+      {
+        user_score: 8,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 9,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+      {
+        user_score: 10,
+        score_type: "0",
+        min_score: 7,
+        max_score: 10,
+      },
+    ],
     id: 10,
     about_me: "Morbi metus. Vivamus",
     experience:

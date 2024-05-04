@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3000/api/";
+axios.defaults.baseURL = "https://dashboard-beige-nine.vercel.app/api";
 axios.defaults.withCredentials = true;
 
 export const getAssignmentInfo = createAsyncThunk(

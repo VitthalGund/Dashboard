@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3000/api/";
+axios.defaults.baseURL = "https://dashboard-beige-nine.vercel.app/api";
 export const getAssignmentInfo = async () => {
   try {
     const res = await axios.get(`/assignment_details`);
