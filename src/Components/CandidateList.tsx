@@ -7,12 +7,13 @@ import { useAppDispatch, useAppSelector, useAppStore } from '@/lib/hooks';
 
 const CandidateList = () => {
     const dispatch = useAppDispatch();
-    const candidates = useAppSelector((state) => state.candidateSlice.candidateList) as candidate[];
-    const loading = useAppSelector((state) => state.candidateSlice.loading);
+    const candidates = useAppSelector((state) => state?.candidateSlice?.candidateList) as candidate[];
+    const loading = useAppSelector((state) => state?.candidateSlice?.loading);
     useEffect(() => {
         dispatch(getCandidatesList());
         setId(candidates?.[0]?.id);
-    }, [])
+    }, []);
+    // console.log("client list: ", candidates)
     return (
         <>
             <section className="container mx-auto font-mono">
@@ -30,10 +31,10 @@ const CandidateList = () => {
                                     candidates.map((item, idx) => {
                                         return (
                                             <Candidate
-                                                id={item.id}
-                                                full_name={item.full_name}
-                                                email={item.email}
-                                                img=''
+                                                id={item?.id}
+                                                full_name={item?.full_name}
+                                                email={item?.email}
+                                                img={item?.img}
                                                 score={item.score}
                                                 index={idx}
                                                 key={item.full_name}

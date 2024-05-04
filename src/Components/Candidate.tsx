@@ -15,7 +15,7 @@ const Candidate = ({ email, img, full_name, score, index, id }: candidate) => {
                         <div className="relative w-8 h-8 mr-3 rounded-full md:block">
                             <Image
                                 className="object-cover w-full h-full rounded-full"
-                                src={icon}
+                                src={index != 0 ? img : icon}
                                 width={300} height={300}
                                 alt="user" loading="lazy"
                             />

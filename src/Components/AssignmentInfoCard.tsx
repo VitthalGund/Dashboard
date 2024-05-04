@@ -19,7 +19,8 @@ const AssignmentInfoCard = ({
                 <div className="flex flex-row justify-between w-full">
                     <h4 className='font-bold text-lg'>{title}</h4>
                     <p className={`font-bold flex items-center gap-3 ${status == "Active" ? "text-green-500" : "text-red-600"}`}>{status}
-                        <Image src={pen} alt="plus" width={300} height={300} className='h-8 w-8 p-2 rounded-lg bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]' /></p>
+                        <Image src={pen} alt="plus" width={300} height={300} className='h-8 w-8 p-2 rounded-lg bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] cursor-pointer' />
+                    </p>
                 </div>
                 <div className="flex flex-row justify-between w-full">
                     <h4 className='text-sm font-bold text-gray-500'>Assignment Link</h4>
@@ -27,7 +28,7 @@ const AssignmentInfoCard = ({
                 </div>
                 <div className="flex flex-row justify-between w-full">
                     <h4 className='text-sm font-bold text-gray-500'>Assignment Hours</h4>
-                    <p className={`font-bold text-gray-500`}>{new Date(duration_in_seconds).getHours()} hours</p>
+                    <p className={`font-bold text-gray-500`}>{duration_in_seconds} hours</p>
                 </div>
 
                 <div className="flex flex-row justify-between w-full">

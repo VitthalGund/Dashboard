@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import icon from "../assests/userIcon.jpg";
 import play from "../assests/play.svg";
+import left from "../assests/arrowLeft.svg";
+import right from "../assests/arrowRight.svg";
 import Image from "next/image";
 import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
@@ -27,11 +29,18 @@ const CandidateInfo = () => {
                 setLoading(false);
             })
         }
-    }, [assignmentInfo.id, currentId, dispatch])
+    }, [assignmentInfo?.id, currentId, dispatch, list?.id]);
+    // console.log("Score: ", info?.scores)
+    // React.useEffect(() => {
+    //     const onLoad = () => window.open(`myprotocol://open${params}`, '_self')
+    //     window.addEventListener('load', onLoad)
+    //     return () => window.removeEventListener('load', onLoad)
+    // }, [])
+
 
     return (
         <>
-            {info?.full_name && <div className="flex flex-row bg-white p-5 mt-24 rounded justify-center w-fit h-fit mr-3 max-sm:flex-col sm:flex-col 2xl:flex-row">
+            {info?.full_name && <div className="flex flex-row bg-white p-5 mt-24 rounded justify-center w-[57vw] h-fit">
                 <div className="flex flex-col rounded h-fit mr-3">
                     <div className="flex w-full h-fit">
                         <div className={`text-gray-700 `}>
@@ -79,7 +88,7 @@ const CandidateInfo = () => {
                                         : "text-yellow-300"
                                         } font-bold`}
                                 >
-                                    {info?.scores?.[0].user_score}/{info?.scores?.[0].max_score}
+                                    {info?.scores?.[0]?.user_score}/{info?.scores?.[0]?.max_score}
                                 </p>
                             </div>
                         </div>
@@ -93,7 +102,7 @@ const CandidateInfo = () => {
                                         : "text-yellow-300"
                                         } font-bold`}
                                 >
-                                    {info?.scores?.[1].user_score}/{info?.scores?.[1].max_score}
+                                    {info?.scores?.[1]?.user_score}/{info?.scores?.[1]?.max_score}
                                 </p>
                             </div>
                         </div>
@@ -107,7 +116,7 @@ const CandidateInfo = () => {
                                         : "text-yellow-300"
                                         } font-bold`}
                                 >
-                                    {info?.scores?.[2].user_score}/{info?.scores?.[2].max_score}
+                                    {info?.scores?.[2]?.user_score}/{info?.scores?.[2]?.max_score}
                                 </p>
                             </div>
                         </div>
@@ -131,47 +140,49 @@ const CandidateInfo = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex">
+                <div className="flex w-fit flex-row flex-nowrap">
                     <Image
-                        className="object-cover w-full h-full rounded border-t-[40px] border-[linear-gradient(to right, #ffffff ,#e2e8f0 )]"
+                        className="object-cover w-80 h-full rounded border-t-[40px] border-[linear-gradient(to right, #ffffff ,#e2e8f0 )]"
                         src={icon}
                         alt="user"
                         width={600}
                         height={600}
                         loading="lazy"
                     />
-                    {/* relative top-[16rem] right-[12rem] h-10 border-none sm:top-[27rem] sm:right-[20rem] */}
                     <Image
-                        className="object-cover w-10 text-white relative 2xl:top-[17rem] 2xl:right-[12rem] h-10 border-none sm:top-[27rem] sm:right-[20rem]"
+                        className="object-cover w-10 text-white relative 2xl:top-[50%] 2xl:right-[45%] h-10 border-none sm:top-[50%] sm:right-[45%]"
                         src={play}
                         alt="user"
                         width={600}
                         height={600}
                         loading="lazy"
                     />
-                    {/* <div className="flex bg-black w-max p-3 h-14 justify-center items-center re bottom-11">
+
+                    <div className="flex relative p-3 h-14  justify-center items-center top-[90%] right-[98%]">
                         <Image
-                            className="object-cover w-10  bg-[#718096] rounded m-3"
+                            className="object-cover w-[15%] relative left-[13%] bg-[#718096] z-50 p-5 rounded m-3"
                             src={left}
                             alt="user"
                             width={600}
                             height={600}
                             loading="lazy"
                         />
-                        <h5 className="text-white w-60 ">Tell me about yourself</h5>
-                        <div className="box bg-black">
+                        <div className="box  shadow drop-shadow-2xl shadow-inherit bg-black text-white">
+                            <h5 className="text-white relative bottom-8 lg:w-[17rem] text-center">Tell me about yourself</h5>
+                            <p className="text-white lg:w-[17rem] text-center">
+                                Question 1/11
+                            </p>
                         </div>
                         <Image
-                            className="object-cover w-10  bg-[#718096] 2xl:bottom-14 2xl:right-[13rem] h-10 rounded p-1 sm:bottom-0 sm:right-[20rem]"
+                            className="object-cover w-[15%] relative right-[10%] bg-[#718096] p-5 rounded m-3"
                             src={right}
                             alt="user"
                             width={600}
                             height={600}
                             loading="lazy"
                         />
-                    </div> */}
+                    </div>
                 </div>
-
             </div >}
         </>
     );

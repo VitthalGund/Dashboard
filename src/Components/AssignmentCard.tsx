@@ -6,7 +6,7 @@ const AssignmentCard = () => {
         <>
             <div className="flex flex-col bg-[#1ec3b3] p-5 gap-2 max-w-[300px] h-fit rounded-lg">
                 <div className="mb-8">
-                    <div className="bg-white w-12 flex justify-center rounded-lg">
+                    <div className="bg-white w-12 flex justify-center rounded-lg cursor-pointer">
                         <Image src={plus} alt="plus" width={300} height={300} className=' h-10 w-10 rounded-lg' />
                     </div>
                 </div>
