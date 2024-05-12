@@ -1,7 +1,7 @@
 # 🚀 Project Dashboard
 
 ## Overview
-Project Dashboard is a sophisticated web application meticulously crafted for discerning project managers and team leads. It serves as a powerful tool to gain comprehensive insights into project statuses, task assignments, and team performance, enabling seamless project management and collaboration.
+Project Dashboard is a sophisticated web application meticulously crafted for discerning project managers and team leads. It serves as a powerful tool to gain comprehensive insights into project statuses, task assignments, and team performance, enabling seamless project management and collaboration. (Note: This is just frontend UI with dummy fakeAPI)
 
 ## Key Features
 1. **Detailed Assignment Overview**: 📊 Dive deep into project assignments with comprehensive task breakdowns, deadlines, and completion statuses.
